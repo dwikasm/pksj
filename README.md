@@ -32,6 +32,7 @@ tools : openssh, hydra, ncrack
   1. Pada ubuntu server dan ubuntu desktop : sudo apt-get install openssh-server
   
 * Langkah uji penetrasi dengan SSH brute force tools
+
   **Hydra**
     1. sudo apt-get install hydra hydra-gtk
     2. Untuk memakainya : hydra -l ubuntu -x 6:6:a 192.168.26.102 ssh -V
