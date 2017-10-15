@@ -35,6 +35,7 @@ tools : openssh, hydra, ncrack
   1. Hydra
     1. sudo apt-get install hydra hydra-gtk
     2. Untuk memakainya : hydra -l ubuntu -x 6:6:a 192.168.26.102 ssh -V
+    
   2. Ncrack
     1. wget http://nmap.org/ncrack/dist/ncrack-0.4ALPHA.tar.gz
     2. sudo apt-get install build-essential checkinstall libssl-dev  libssh-dev
