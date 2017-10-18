@@ -50,3 +50,9 @@ tools : openssh, hydra, ncrack
     6. make
     7. sudo make install
     8. Untuk memakainya ncrack -p 22 --user ubuntu -P pass.txt 192.168.56.102
+    
+  **Fail2Ban**
+    1. sudo apt-get install fail2ban
+    2. atur config di /etc/fail2ban/jail.conf
+    3. sudo service fail2ban start
+    4. Jika ada yang mencoba bruteforce maka akan diban sementara sesuai konfigurasi. Hasilnya dapat terlihat dengan menjalankan command "sudo iptables -S"
