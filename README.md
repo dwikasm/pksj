@@ -3,12 +3,11 @@
 ## Tugas 1
 
 ### Pendahuluan
-    
+Pada saat ini keamanan jaringan merupakan bagian yang penting dalam keberlangsungan sistem komputer. Keamanan jaringan sangat dibutuhkan agar sebuah sistem komputer tahan dari serangan atau peretasan oleh hacker. Pada laporan ini kami akan membahas cara penggunaan dari beberapa tool yang biasanya digunakan dalam hacking. Dalam seni hacking atau penetration testing kita mengenal beberapa teknik yang dapat digunakan untuk meretas sebuah sistem yang kita inginkan, salah satunya merupakan teknik Password Cracking. Pada llaporan ini kami akan menjelaskan persiapan apa saja yang dibutuhkan, penjelasan mengenai tool yang akan digunakan, dan cara menggunakannya untuk mencoba Password Cracking.
 
 ### Dasar Teori
 #### Password Cracking
- Password Cracking merupakan salah satu teknik yang sering digunakan dalam seni hacking. Password Cracking sendiri merupakan proses untuk mendapatkan password rahasia dari data yang telah disimpan maupun ditransmisikan dari sebuah sistem komputer. Pada tugas ini kami menggunakan teknik Brute Force Attack. 
- Brute Force Attack sendiri adalah metode untuk mendapatkan password dengan cara login dan mencoba semua kemungkinan kombinasi kata pada password. Pada Brute Force Attack jika login berhasil, maka password dapat ditemukan. Dan jika password yang digunakan pada suatu sistem cukup kuat dengan kombinasi huruf, angka, dan simbol proses ini akan memakan waktu hingga berjam - jam, hari, minggu, bahkan bulanan. Tools hacking yang menggunakan metode Brute Force biasanya bergantung pada dictionary / kamus yang berisi kata-kata yang mungkin dijadikan password dari sistem yang akan diserang.
+Password Cracking merupakan salah satu teknik yang sering digunakan dalam seni hacking. Password Cracking sendiri merupakan proses untuk mendapatkan password rahasia dari data yang telah disimpan maupun ditransmisikan dari sebuah sistem komputer. Pada tugas ini kami menggunakan teknik Brute Force Attack. Brute Force Attack sendiri adalah metode untuk mendapatkan password dengan cara login dan mencoba semua kemungkinan kombinasi kata pada password. Pada Brute Force Attack jika login berhasil, maka password dapat ditemukan. Dan jika password yang digunakan pada suatu sistem cukup kuat dengan kombinasi huruf, angka, dan simbol proses ini akan memakan waktu hingga berjam - jam, hari, minggu, bahkan bulanan. Tools hacking yang menggunakan metode Brute Force biasanya bergantung pada dictionary / kamus yang berisi kata-kata yang mungkin dijadikan password dari sistem yang akan diserang.
 
 penjelasan OS dan semua tools yang digunakan
 os : ubuntu server dan ubuntu desktop
