@@ -3,7 +3,7 @@
 ## Tugas 1
 
 ### Pendahuluan
-Pada saat ini keamanan jaringan merupakan bagian yang penting dalam keberlangsungan sistem komputer. Keamanan jaringan sangat dibutuhkan agar sebuah sistem komputer tahan dari serangan atau peretasan oleh hacker. Pada laporan ini kami akan membahas cara penggunaan dari beberapa tool yang biasanya digunakan dalam hacking. Dalam seni hacking atau penetration testing kita mengenal beberapa teknik yang dapat digunakan untuk meretas sebuah sistem yang kita inginkan, salah satunya merupakan teknik Password Cracking. Pada llaporan ini kami akan menjelaskan persiapan apa saja yang dibutuhkan, penjelasan mengenai tool yang akan digunakan, dan cara menggunakannya untuk mencoba Password Cracking.
+Pada saat ini keamanan jaringan merupakan bagian yang penting dalam keberlangsungan sistem komputer. Keamanan jaringan sangat dibutuhkan agar sebuah sistem komputer tahan dari serangan atau peretasan oleh hacker. Pada laporan ini kami akan membahas cara penggunaan dari beberapa tool yang biasanya digunakan dalam hacking. Dalam seni hacking atau penetration testing kita mengenal beberapa teknik yang dapat digunakan untuk meretas sebuah sistem yang kita inginkan, salah satunya merupakan teknik Password Cracking. Pada laporan ini kami akan menjelaskan persiapan apa saja yang dibutuhkan, penjelasan mengenai tool yang akan digunakan, dan cara menggunakannya untuk mencoba Password Cracking.
 
 ### Dasar Teori
 #### Password Cracking
