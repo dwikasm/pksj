@@ -54,8 +54,8 @@ tools : openssh, hydra, ncrack
     7. sudo make install
     8. Untuk memakainya ncrack -p 22 --user ubuntu -P pass.txt 192.168.56.102
 
-  **Ncrack**
-    1.
+  **Medusa**
+    1. sudo apt-get install medusa
     2. Untuk memakai : medusa -u [username] -P [password list file] -M [metode yang ingin digunakan (ssh, mysql)]
     
   **Fail2Ban**
