@@ -42,8 +42,8 @@ tools : openssh, hydra, ncrack, medusa, fail2ban
   
 #### Langkah uji penetrasi dengan SSH brute force tools
 1. Uji dengan password yang dicantumkan dalam file
-``* File yang berisi sejumlah list password beserta password asli
-``* File yang berisi sejumlah list password tanpa password
+*   File yang berisi sejumlah list password beserta password asli
+*   File yang berisi sejumlah list password tanpa password
 2. Uji dengan metode brute force tanpa dictionary
 
 #### Hydra
@@ -101,7 +101,7 @@ untuk menjalankan medusa
   ```bash
   sudo apt-get install fail2ban
   ```
-Kemudian atur configurasi di /etc/fail2ban/jail.conf. Setelah configurasi selesai dilakukan, jalankan command-line berikut untuk menjalankan fail2ban pada server
+Kemudian atur configurasi di `` /etc/fail2ban/jail.conf ``. Setelah configurasi selesai dilakukan, jalankan command-line berikut untuk menjalankan fail2ban pada server
   ```bash
   sudo service fail2ban start
   ```
