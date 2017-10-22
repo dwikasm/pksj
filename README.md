@@ -42,8 +42,8 @@ tools : openssh, hydra, ncrack, medusa, fail2ban
   
 #### Langkah uji penetrasi dengan SSH brute force tools
 1. Uji dengan password yang dicantumkan dalam file
-⋅⋅* File yang berisi sejumlah list password beserta password asli
-⋅⋅* File yang berisi sejumlah list password tanpa password
+  * File yang berisi sejumlah list password beserta password asli
+  * File yang berisi sejumlah list password tanpa password
 2. Uji dengan metode brute force tanpa dictionary
 
 #### Hydra
