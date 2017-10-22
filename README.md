@@ -35,13 +35,16 @@ tools : openssh, hydra, ncrack, medusa, fail2ban
   6. Run virtual machine tadi lalu install ubuntu desktop seperti biasanya
   
 #### Instalasi SSH Server
-  1. Pada ubuntu server dan ubuntu desktop : sudo apt-get install openssh-server
+  Pada ubuntu server dan ubuntu desktop jalankan command berikut 
+  ```bash
+  sudo apt-get install openssh-server
+  ```
   
 #### Langkah uji penetrasi dengan SSH brute force tools
-.1 Uji dengan password yang dicantumkan dalam file
-..* File yang berisi sejumlah list password beserta password asli
-..* File yang berisi sejumlah list password tanpa password
-.2 Uji dengan metode brute force tanpa dictionary
+1. Uji dengan password yang dicantumkan dalam file
+⋅⋅* File yang berisi sejumlah list password beserta password asli
+⋅⋅* File yang berisi sejumlah list password tanpa password
+2. Uji dengan metode brute force tanpa dictionary
 
 #### Hydra
 
