@@ -110,22 +110,22 @@ Jika ada yang mencoba bruteforce maka akan diban sementara sesuai konfigurasi. H
 sudo iptables -S
 ```
 
-## Tugas 1
+## Tugas 2
 
-####install apache2
+#### install apache2
 sudo apt-get install apache2 apache2-utils
 sudo systemctl enable apache2
 sudo systemctl start apache2
 
-####install mysql
+#### install mysql
 sudo apt-get install mysql-client mysql-server
 sudo mysql-secure-isntallation
 
-####install php and modules
+#### install php and modules
 sudo apt-get install php7.0 php7.0-mysql libapache2-mod-php7.0 php7.0-cli php7.0-cgi php7.0-gd  
 sudo nano /var/www/html/info.php buat ngetes
 
-####install wordpress cms
+#### install wordpress cms
 wget -c http://wordpress.org/latest.tar.gz
 tar -xzvf latest.tar.gz
 
@@ -134,7 +134,7 @@ sudo rsync -av wordpress/* /var/www/html/
 sudo chown -R www-data:www-data /var/www/html/
 $ sudo chmod -R 755 /var/www/html/
 
-####create wordpress database
+#### create wordpress database
 mysql -u root -p
 mysql> CREATE DATABASE wp_myblog;
 mysql> GRANT ALL PRIVILEGES ON wp_myblog.* TO 'your_username_here'@'localhost' IDENTIFIED BY 'your_chosen_password_here';
@@ -152,7 +152,7 @@ buka localhost/wp-admin/setup-config.php
 buat user
 login
 
-####install plugin
+#### install plugin
 cd /var/www/html/wp-content/plugins
 sudo wget -c https://downloads.wordpress.org/plugin/player.1.5.16.zip
 sudo wget -c https://downloads.wordpress.org/plugin/leaguemanager.3.9.1.1.zip
