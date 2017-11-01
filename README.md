@@ -113,28 +113,42 @@ sudo iptables -S
 ## Tugas 2
 
 #### install apache2
+```bash
 sudo apt-get install apache2 apache2-utils
 sudo systemctl enable apache2
 sudo systemctl start apache2
+```
 
 #### install mysql
+```bash
 sudo apt-get install mysql-client mysql-server
 sudo mysql-secure-isntallation
+```
 
 #### install php and modules
+```bash
 sudo apt-get install php7.0 php7.0-mysql libapache2-mod-php7.0 php7.0-cli php7.0-cgi php7.0-gd  
 sudo nano /var/www/html/info.php buat ngetes
+```
 
 #### install wordpress cms
+```bash
 wget -c http://wordpress.org/latest.tar.gz
 tar -xzvf latest.tar.gz
+```
 
+```bash
 sudo rsync -av wordpress/* /var/www/html/
+```
 
+```bash
 sudo chown -R www-data:www-data /var/www/html/
 $ sudo chmod -R 755 /var/www/html/
+```
 
 #### create wordpress database
+
+```bash
 mysql -u root -p
 mysql> CREATE DATABASE wp_myblog;
 mysql> GRANT ALL PRIVILEGES ON wp_myblog.* TO 'your_username_here'@'localhost' IDENTIFIED BY 'your_chosen_password_here';
@@ -142,17 +156,18 @@ mysql> FLUSH PRIVILEGES;
 mysql> EXIT;
 
 sudo mv wp-config-sample.php wp-config.php
-
+```
 ubah wp-config.php sesuai database
-
+```bash
 sudo systemctl restart apache2.service 
 sudo systemctl restart mysql.service 
-
+```
 buka localhost/wp-admin/setup-config.php
 buat user
 login
 
 #### install plugin
+```bash
 cd /var/www/html/wp-content/plugins
 sudo wget -c https://downloads.wordpress.org/plugin/player.1.5.16.zip
 sudo wget -c https://downloads.wordpress.org/plugin/leaguemanager.3.9.1.1.zip
@@ -161,6 +176,7 @@ sudo apt-get install unzip
 
 sudo unzip player.1.5.16.zip
 sudo unzip leaguemanager.3.9.1.1.zip
+```
 
 buka halaman wordpressnya, login
 pilih plugins, installed plugins
