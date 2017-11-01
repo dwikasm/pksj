@@ -184,20 +184,20 @@ aktifkan plugins yang sudah diinstall
 
 #### WPSCAN
 Install file yang dibutuhkan
-'''bash
+```bash
 sudo apt-get install git
 sudo apt-get install libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
-'''
+```
 
 Clone git project wpscan
-'''bash
+```bash
 git clone https://github.com/wpscanteam/wpscan.git
 cd wpscan
 sudo gem install bundler && bundle install --without test development
-'''
+```
 
 Jalankan menggunakan ruby
-'''bash
+```bash
 unzip data.zip
 ruby wpscan.rb -u 192.168.56.103 --enumerate vp
-'''
+```
