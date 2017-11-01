@@ -201,3 +201,14 @@ Jalankan menggunakan ruby
 unzip data.zip
 ruby wpscan.rb -u 192.168.56.103 --enumerate vp
 ```
+#### SQLmap
+Clone git project sqlmap
+```bash
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+```
+
+Jalankan menggunakan python
+```bash
+cd sqlmap
+python sqlmap.py -u '192.168.56.102/info.php?id=1'
+```
