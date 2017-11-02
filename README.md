@@ -9,9 +9,6 @@ Pada saat ini keamanan jaringan merupakan bagian yang penting dalam keberlangsun
 #### Password Cracking
 Password Cracking merupakan salah satu teknik yang sering digunakan dalam seni hacking. Password Cracking sendiri merupakan proses untuk mendapatkan password rahasia dari data yang telah disimpan maupun ditransmisikan dari sebuah sistem komputer. Pada tugas ini kami menggunakan teknik Brute Force Attack. Brute Force Attack sendiri adalah metode untuk mendapatkan password dengan cara login dan mencoba semua kemungkinan kombinasi kata pada password. Pada Brute Force Attack jika login berhasil, maka password dapat ditemukan. Dan jika password yang digunakan pada suatu sistem cukup kuat dengan kombinasi huruf, angka, dan simbol proses ini akan memakan waktu hingga berjam - jam, hari, minggu, bahkan bulanan. Tools hacking yang menggunakan metode Brute Force biasanya bergantung pada dictionary / kamus yang berisi kata-kata yang mungkin dijadikan password dari sistem yang akan diserang.
 
-#### Countermeasure
-Dalam penetrasi sistem dengan teknik password cracking salah satu countermeasure yang dapat kita gunakan adalah dengan membatasi percobaan login dari sumber yang melakukan percobaan login berkali2 dengan cara brute force. Untuk melakukan tindakan balasan brute force kami menggunakan tool fail2ban. Pada dasarnya fail2ban bekerja dengan mengamati log dari server yang sedang aktif. bila ada host yang dicurigai melakukan percobaan akses kepada server dalam percobaan tertentu maka fail2ban akan mengedit aturan firewall iptables.
-
 penjelasan OS dan semua tools yang digunakan
 os : ubuntu server dan ubuntu desktop
 tools : openssh, hydra, ncrack, medusa, fail2ban
@@ -109,6 +106,11 @@ Jika ada yang mencoba bruteforce maka akan diban sementara sesuai konfigurasi. H
 ```bash
 sudo iptables -S
 ```
+### Kesimpulan
+
+#### Countermeasure
+Dalam penetrasi sistem dengan teknik password cracking salah satu countermeasure yang dapat kita gunakan adalah dengan membatasi percobaan login dari sumber yang melakukan percobaan login berkali2 dengan cara brute force. Untuk melakukan tindakan balasan brute force kami menggunakan tool fail2ban. Pada dasarnya fail2ban bekerja dengan mengamati log dari server yang sedang aktif. bila ada host yang dicurigai melakukan percobaan akses kepada server dalam percobaan tertentu maka fail2ban akan mengedit aturan firewall iptables.
+
 
 ## Tugas 2
 
@@ -119,7 +121,10 @@ Pada Tugas 2 kami akan mencoba penetrasi aplikasi web berbasis wordpress dengan 
 #### SQL Injection
 SQL Injection merupakan teknik mengeksploitasi aplikasi web yang didalamnya menggunakan database untuk penyimpanan data.  Aksi hacking / attacking dengan SQL injection dapat dilakukan pada aplikasi client ketika ketika masukan pengguna tidak disaring secara benar dari karakter-karakter pelolos bentukan string yang diimbuhkan dalam pernyataan SQL atau masukan pengguna tidak bertipe kuat dan karenanya dijalankan tidak sesuai harapan.
 
-
+#### Ubuntu Server
+#### Wordpress
+#### SqlMap
+#### WPScan
 
 ### Uji Penetrasi
 #### install apache2
