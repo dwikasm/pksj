@@ -83,6 +83,7 @@ buka localhost/wp-admin/setup-config.php
 buat user
 login
 
+
 #### install plugin
 ```bash
 cd /var/www/html/wp-content/plugins
@@ -118,6 +119,12 @@ Jalankan menggunakan ruby
 unzip data.zip
 ruby wpscan.rb -u 192.168.56.103 --enumerate vp
 ```
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/wpscan/1.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/wpscan/2.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/wpscan/3.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/wpscan/4.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/wpscan/5.png)
+
 #### SQLmap
 Clone git project sqlmap
 ```bash
@@ -134,6 +141,14 @@ Jalankan sqlmap menggunakan python
 cd sqlmap
 python sqlmap.py -u 'http://www.icdcprague.org/index.php?id=10'
 ```
+
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/sqlmap/1.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/sqlmap/2.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/sqlmap/3.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/sqlmap/4.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/sqlmap/5.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/sqlmap/6.png)
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/sqlmap/7.png)
 
 ### Kesimpulan
 
