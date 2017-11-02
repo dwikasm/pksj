@@ -5,7 +5,7 @@ Pada Tugas 2 kami akan mencoba penetrasi aplikasi web berbasis wordpress dengan 
 
 ### Dasar Teori
 #### SQL Injection
-SQL Injection merupakan teknik mengeksploitasi aplikasi web yang didalamnya menggunakan database untuk penyimpanan data.  Aksi hacking / attacking dengan SQL injection dapat dilakukan pada aplikasi client ketika ketika masukan pengguna tidak disaring secara benar dari karakter-karakter pelolos bentukan string yang diimbuhkan dalam pernyataan SQL atau masukan pengguna tidak bertipe kuat dan karenanya dijalankan tidak sesuai harapan.
+SQL Injection merupakan teknik mengeksploitasi aplikasi web yang didalamnya menggunakan database untuk penyimpanan data.  Aksi hacking / attacking dengan SQL injection dapat dilakukan pada aplikasi client ketika masukan pengguna tidak disaring secara benar dari string yang dikirim dan dieksekusi dalam pernyataan SQL atau masukan pengguna tidak berisi yang semestinya dan sehingga saat dijalankan hasilnya tidak sesuai harapan.
 
 #### Ubuntu Server
 Ubuntu Server adalah sistem operasi distribusi linux yang berasal dari sistem operasi ubuntu tanpa tampilan GUI desktop
@@ -14,7 +14,7 @@ Ubuntu Server adalah sistem operasi distribusi linux yang berasal dari sistem op
 WordPress adalah sebuah aplikasi sumber terbuka (open source) yang sangat populer digunakan sebagai mesin blog (blog engine). WordPress dibangun dengan bahasa pemrograman PHP dan basis data (database) MySQL. PHP dan MySQL, keduanya merupakan perangkat lunak sumber terbuka (open source software).
 
 #### SqlMap
-SQLMap adalah alat uji penetrasi open source yang mengotomatisasi proses mendeteksi dan mengeksploitasi kelemahan injeksi SQL dan mengambil alih basis data server.
+SQLMap adalah alat uji penetrasi open source yang mengotomatisasi proses mendeteksi dan mengeksploitasi kelemahan injeksi SQL dan mengambil alih basis data server. 
   
 #### WPScan
 WPScan adalah scanner keamanan yang memeriksa keamanan WordPress menggunakan metode “black box”.
@@ -83,6 +83,7 @@ buka localhost/wp-admin/setup-config.php
 buat user
 login
 
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/wordpress/wp1.png)
 
 #### install plugin
 ```bash
@@ -99,6 +100,8 @@ sudo unzip leaguemanager.3.9.1.1.zip
 buka halaman wordpressnya, login
 pilih plugins, installed plugins
 aktifkan plugins yang sudah diinstall
+
+![alt text](https://github.com/dwikasm/pksj/blob/master/file_assets/wordpress/wp2.png)
 
 #### WPSCAN
 Install file yang dibutuhkan
@@ -153,5 +156,15 @@ python sqlmap.py -u 'http://www.icdcprague.org/index.php?id=10'
 ### Kesimpulan
 
 #### Defense
+Dalam laporan ini kami sudah menerangkan pengertian dari masing2 tool dan bagaimana cara SQL Injection bekerja. Pada dasarnya SQL Injection bekerja dengan cara memasukkan perintah SQL pada kolom inputan yang ada pada aplikasi web yang rentan. Kunci utama dalam mengatasi celah seperti ini adalah dengan mengamankan dan memvalidasi kolom input dan menghentikan perintah SQL yang tidak semestinya dijalankan pada database.
 
 #### Countermeasure
+Terdapat beberapa hal yang dapat kita lakukan dalam pencegahan SQL Injection. Berikut beberapa countermeasure yang dapat kita lakukan: 
+* Source code review.
+* Membersihkan dan memvalidasi kolom input.
+* Tolak entry yang terdapat data binary, tolak karakter sequence dan comment.
+* Memeriksa privilege user saat mengakses database.
+* Password yang kuat pada akun administrator
+* Menggunakan IDS intrusion prevention tool seperti snort pada jaringan
+* Menggunakan algoritma hash dalam penyimpanan data yang sensitif
+* Terapkan pemberian privilege rule pada saat user mengakses database
