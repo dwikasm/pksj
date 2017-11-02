@@ -112,6 +112,16 @@ sudo iptables -S
 
 ## Tugas 2
 
+### Pendahuluan
+Pada Tugas 2 kami akan mencoba penetrasi aplikasi web berbasis wordpress dengan memanfaatkan beberapa plugin yang vulnerable atau berpotensi untuk diserang dengan teknik SQL Injection. Dalam percobaan yang kami lakukan kami menggunakan beberapa tool untuk mencoba SQL Injection.
+
+### Dasar Teori
+#### SQL Injection
+SQL Injection merupakan teknik mengeksploitasi aplikasi web yang didalamnya menggunakan database untuk penyimpanan data.  Aksi hacking / attacking dengan SQL injection dapat dilakukan pada aplikasi client ketika ketika masukan pengguna tidak disaring secara benar dari karakter-karakter pelolos bentukan string yang diimbuhkan dalam pernyataan SQL atau masukan pengguna tidak bertipe kuat dan karenanya dijalankan tidak sesuai harapan.
+
+
+
+### Uji Penetrasi
 #### install apache2
 ```bash
 sudo apt-get install apache2 apache2-utils
@@ -217,3 +227,10 @@ Jalankan sqlmap menggunakan python
 cd sqlmap
 python sqlmap.py -u 'http://www.icdcprague.org/index.php?id=10'
 ```
+
+### Kesimpulan
+
+#### Defense
+
+#### Countermeasure
+
