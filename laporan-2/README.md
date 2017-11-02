@@ -8,9 +8,16 @@ Pada Tugas 2 kami akan mencoba penetrasi aplikasi web berbasis wordpress dengan 
 SQL Injection merupakan teknik mengeksploitasi aplikasi web yang didalamnya menggunakan database untuk penyimpanan data.  Aksi hacking / attacking dengan SQL injection dapat dilakukan pada aplikasi client ketika ketika masukan pengguna tidak disaring secara benar dari karakter-karakter pelolos bentukan string yang diimbuhkan dalam pernyataan SQL atau masukan pengguna tidak bertipe kuat dan karenanya dijalankan tidak sesuai harapan.
 
 #### Ubuntu Server
+Ubuntu Server adalah sistem operasi distribusi linux yang berasal dari sistem operasi ubuntu tanpa tampilan GUI desktop
+
 #### Wordpress
+WordPress adalah sebuah aplikasi sumber terbuka (open source) yang sangat populer digunakan sebagai mesin blog (blog engine). WordPress dibangun dengan bahasa pemrograman PHP dan basis data (database) MySQL. PHP dan MySQL, keduanya merupakan perangkat lunak sumber terbuka (open source software).
+
 #### SqlMap
+SQLMap adalah alat uji penetrasi open source yang mengotomatisasi proses mendeteksi dan mengeksploitasi kelemahan injeksi SQL dan mengambil alih basis data server.
+  
 #### WPScan
+WPScan adalah scanner keamanan yang memeriksa keamanan WordPress menggunakan metode “black box”.
 
 ### Uji Penetrasi
 #### install apache2
@@ -58,7 +65,16 @@ mysql> EXIT;
 
 sudo mv wp-config-sample.php wp-config.php
 ```
+#### configurasi wordpress
+
+jalankan secure values dari wordpress secret key generator
+
+```bash
+curl -s https://api.wordpress.org/secret-key/1.1/salt/
+```
+dan copy hasil ouput dari perintah di atas pada bagian yang menyerupai hasil output pada file wp-config.php
 ubah wp-config.php sesuai database
+
 ```bash
 sudo systemctl restart apache2.service 
 sudo systemctl restart mysql.service 
