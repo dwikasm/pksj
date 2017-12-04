@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* DVWA
+* [DVWA](DVWA/dvwa.md)
   * [Lesson 4](lesson-4.md)
   * Lesson 5
   * [Lesson 6](DVWA/lesson-6.md)
