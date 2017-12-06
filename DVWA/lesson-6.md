@@ -26,7 +26,7 @@
      3. Login: admin
      4. Password: password
      5. Klik Login
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson6/index.31.jpg)
+   * ![](/assets/0. Login.PNG)
 
 | **Section 2: Tetapkan Tingkat Keamanan** |
 | :--- |
@@ -39,7 +39,7 @@
      2. Pilih "low"  
      3. Klik Submit
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson6/index.32.jpg)
+   * ![](/assets/0. Security.PNG)
 
 | **Section 3: Lakukan SQL Injection** |
 | :--- |
@@ -77,9 +77,10 @@
 
 5. Menampilkan user dari database
 
-   * Langkah**:**
+   * Langkah**:**  
      1. Masukkan text di bawah ke dalam User ID Textbox.
-        * `%' or 0=0 union select null, user() #`
+
+     * `%' or 0=0 union select null, user() #`
 
    * ![](/assets/1.3 Display Database User.PNG)
 
@@ -126,7 +127,7 @@
 | :--- |
 
 
-1. Membuat file hash password 
+1. Membuat file hash password
 
    * **Langkah:**
 

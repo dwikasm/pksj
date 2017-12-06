@@ -5,7 +5,7 @@
   * [Lesson 4](lesson-4.md)
   * Lesson 5
   * [Lesson 6](DVWA/lesson-6.md)
-  * Lesson 7
+  * [Lesson 7](DVWA/lesson-7.md)
   * Lesson 8
   * Lesson 9
   * Lesson 10
