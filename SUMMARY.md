@@ -10,6 +10,6 @@
   * Lesson 9
   * Lesson 10
   * Lesson 11
-* Cuckoo
+* [Cuckoo](cuckoo.md)
 * Snort
 
