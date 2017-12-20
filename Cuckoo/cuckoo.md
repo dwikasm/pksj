@@ -1,4 +1,4 @@
-##Laporan PKSJ Cuckoo
+Laporan PKSJ Cuckoo
 
 ### Pendahuluan 
 
@@ -11,7 +11,14 @@ Malware sendiri sudah menjadi suatu target riset untuk para security analysis da
 ### Dasar Teori 
 #### Cukoo 
 
-Cuckoo dapat digunakan untuk melakukan analisa malware dan memberi report secara otomatis apa saja yang dilakukan malware terhadap komputer. Malware akan dijalankan dalam sebuah sandbox yang menggunakan os Windows. Cuckoo dapat melakukan analisa terhadap berbagai macam sampel malware. Beberapa jenis file yang dapat dianalisa dengan cuckoo diantaranya: •     File exe (Generic Windows executables) •     file DLL files •     dokumen PDF •     dokumen Microsoft Office •     Halaman Web •     Script PHP •     dll
+Cuckoo dapat digunakan untuk melakukan analisa malware dan memberi report secara otomatis apa saja yang dilakukan malware terhadap komputer. Malware akan dijalankan dalam sebuah sandbox yang menggunakan os Windows. Cuckoo dapat melakukan analisa terhadap berbagai macam sampel malware. Beberapa jenis file yang dapat dianalisa dengan cuckoo diantaranya:
+•     File exe (Generic Windows executables)
+•     file DLL files
+•     dokumen PDF
+•     dokumen Microsoft Office
+•     Halaman Web
+•     Script PHP
+•     dll
 Setelah dijalankan cuckoo akan melaporkan hasil analisa malware. Hasil analisa yang dilaporkan diantaranya:
 	•	API calls apa saja yang dijalankan malware
 	•	File apa saja yang dibuat,
@@ -26,23 +33,23 @@ Cuckoo bisa berjalan pada berbagai distro Linux. Tools ini open source, disuppor
 ### Instalasi
 
 Requirements:
-‘’’
+```
 Mac OS Sierra 10.2.3
 Homebrew sudah di install , Homebrew dapat di instal dengan:
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 Virtual Box Sudah terinstall
 Python dengan versi terbaru
 mongodb sudah terinstalasi
-‘’’
+```
 
 1. Install Dependensies untuk python yaitu
-‘’’
+```
 sudo easy_install pip
 pip install python-magic
 brew install libmagic
 sudo pip install dpkt-fix
 sudo pip install mako
-‘’’
+```
 
 2. Konifgurasi tcpdump
 
@@ -68,7 +75,7 @@ instalasi windows xp sebagai berikut:
 
 4. Instalasi Cuckoo
 untuk menginstal cuckoo dengan menuliskan command
-	‘’’ pip install -U cuckoo ‘’’ 
+	``` pip install -U cuckoo ``` 
 
 ###Konfigurasi
 
@@ -81,23 +88,23 @@ untuk menginstal cuckoo dengan menuliskan command
 4. klik dua kali untuk menjalankan agent.pyw
 
 5. untuk melihat apakah agent sudah dimulai gunakan command dibawah ini di command prompt WinXP
-		‘’’ netstat -na ‘’’ 
+		``` netstat -na ```
 	lalu lihat apakah ada socket yang listening di port 0.0.0.0:8000
 ![](/SebelumAgentpywdanSesudah.png)
 
 5. Kemudian ambil snapshot dengan menggunakan command berikut di terminal mac
-	‘’’ vboxmanage snapshot "WindowsXP" take "WindowsXPsnap1” --pause ‘’’ 
+	```vboxmanage snapshot "WindowsXP" take "WindowsXPsnap1” --pause ```
 	dengan ketentuan “WindowsXP” merupakan nama VM yang anda namakan di VM WInXP yang dibuat
 6. Setelah di snapshot anda bisa merestore snapshotnya dengan 3 command dibawah ini
-	‘’’
+	```
  	 vboxmanage controlvm "WindowsXPVM1" poweroff  
  	 vboxmanage snapshot "WindowsXPVM1" restorecurrent  
  	 vboxheadless --startvm "WindowsXPVM1"  
-	‘’’ 
+	``` 
 
 7. Kemudian setting virtualbox.conf di .cuckoo/conf/virtualbox.conf sesuai dengan configurasi dibawah
-‘’’ 
-	  [virtualbox]  
+
+	 ``` [virtualbox]  
   # Specify which VirtualBox mode you want to run your machines on.  
   # Can be "gui", "sdl" or "headless". Refer to VirtualBox's official  
   # documentation to understand the differences.  
@@ -119,10 +126,10 @@ untuk menginstal cuckoo dengan menuliskan command
   # is valid and that the host machine is able to reach it. If not, the analysis  
   # will fail.  
   ip = 192.168.56.101
-‘’’ 
-
+```
+```
 8. seting enable yes di bagian mongodb dalam reporting.conf
-‘’’ 
+```
 # Enable or disable the available reporting modules [on/off].
 # If you add a custom reporting module to your Cuckoo setup, you have to add
 # a dedicated entry in this file, or it won't be executed.
@@ -166,18 +173,18 @@ paginate = 100
 # MongoDB authentication (optional).
 username =
 password =
-‘’’ 
+```
 
 9. Jalankan cuckoo di tab terminal pertama dengan perintah
-‘’’ 
+```
 cuckoo
-‘’’ 
+``` 
 ![](/Cuckoonya.png)
 
 10. Jalankan Web cuckoo dengan menggunakan perintah
-‘’’ 
+```
 cuckoo web runserver 0.0.0.0:8000
-‘’’ 
+```
 
 11. buka localhost:8000 dari host maka akan muncul seperti gambar berikut
 ![](/TampilanAwalCuckoo.png)
