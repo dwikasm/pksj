@@ -36,33 +36,33 @@ NOTE
 		exploit
 	``
 
-![](/assets/lesson8/3.png)
+![](/assets/lesson8/3.PNG)
 
 | **Langkah 3: Mengunggah Script Payload Pada DVWA** |
 | :--- |
 
 1. Lakukan login pada dvwa
 
-![](/assets/lesson8/4.png)	
+![](/assets/lesson8/4.PNG)	
 
 2. Set DVWA Security ke low
 
-![](/assets/lesson8/5.png)	
+![](/assets/lesson8/5.PNG)	
 
 3. Buka menu Upload, pada form upload pilih file PHONE_HOME.php yang telah dibuat sebelumnya
 
-![](/assets/lesson8/6.png)	
+![](/assets/lesson8/6.PNG)	
 
 4. File PHONE_HOME.php akan disimpan pada 192.168.56.102/dvwa/hackable/uploads/ .
 
-![](/assets/lesson8/7.png)	
+![](/assets/lesson8/7.PNG)	
 
 | **Langkah 4: Menggunakan Payload untuk Mengendalikan DVWA** |
 | :--- |
 
 1. Pada link tempat file disimpan, klik file agar dvwa menjalankan file tersebut.
 
-![](/assets/lesson8/7.png)	
+![](/assets/lesson8/7.PNG)	
 
 2. Buka msfconsole untuk melakukan command terhadap dvwa. Pada msfconsole akan muncul meterpreter kemudian masukkan command `shell` untuk dapat memulai shell scripting
 
@@ -76,9 +76,9 @@ NOTE
 		ls -l
 	``
 
-![](/assets/lesson8/8.png)
+![](/assets/lesson8/8.PNG)
 
 4. Dari command tersebut akan terbuat file hacked.html pada 192.168.56.102/dvwa/hackable/uploads/hacked.html
 
-![](/assets/lesson8/9.png)
+![](/assets/lesson8/9.PNG)
       
