@@ -90,7 +90,7 @@ untuk menginstal cuckoo dengan menuliskan command
 5. untuk melihat apakah agent sudah dimulai gunakan command dibawah ini di command prompt WinXP
 		``` netstat -na ```
 	lalu lihat apakah ada socket yang listening di port 0.0.0.0:8000
-![](/SebelumAgentpywdanSesudah.png)
+![](SebelumAgentpywdanSesudah.png)
 
 5. Kemudian ambil snapshot dengan menggunakan command berikut di terminal mac
 	```vboxmanage snapshot "WindowsXP" take "WindowsXPsnap1” --pause ```
@@ -177,7 +177,7 @@ password =
 ```
 cuckoo
 ``` 
-![](/Cuckoonya.png)
+![asd](Cuckoonya.png)
 
 10. Jalankan Web cuckoo dengan menggunakan perintah
 ```
@@ -191,20 +191,20 @@ cuckoo web runserver 0.0.0.0:8000
 Setelah kita menginstall dan mengkonfigurasi Cuckoo berikut adalah salah satu testing untuk malware
 
 1.Buka localhost:8000 dan akan terlihat tampilan seperti berikut ini 
-![](/TampilanAwalCuckoo.png)
+![](TampilanAwalCuckoo.png)
 
 2. Kemudian Upload malware yang akan di uji disini diambil contoh adalah dd53a42b-e494-11e7-b461-80e65024849a.exe dengan link dari virustotal adalah https://www.virustotal.com/en/file/f618862c3754c54581b0db78cb46c788a27104422cf42c7981849d18a96f9d64/analysis/1513550977/
-![](/Uploading.png)
+![](Uploading.png)
 3. Upload malware
 
 4. Setelah malware di upload akan muncul halaman berikut lalu klik analyze
-![](/SetelahUpload.png)
+![](SetelahUpload.png)
 
 5. maka akan muncul digambar berikut 
-![](/HasilScan.png)
+![](HasilScan.png)
 
 6. untuk melihat hasil analisa ada di menu recent lalu pilih kegiatan scan yang mana yang aka di lihat hasilnya 
-![](/PilihHasil.png)
+![](PilihHasil.png)
 
 7. lalu akan muncul summary hasil scan
-![](/SummaryHasilScan.png)![](/SummaryScan.png)
+![](SummaryHasilScan.png)![](SummaryScan.png)
