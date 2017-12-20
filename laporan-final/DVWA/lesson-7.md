@@ -11,62 +11,93 @@ NOTE
 | **Langkah 1: Mendapatkan Referer dan Cookie** |
 | :--- |
 
-1. Pada browser Firefox backtrack buka Tools > Addson  
+1. Gunakan Temper Data seperti yang digunakan pada lesson 5. Login terlebih dahulu ke dalam dvwa, pilih menu SQL Injection     
 
-2. Aktifkan Tool Temper Data 
+2. Masukkan angka 1 pada form lalu klik tombol submit
 
-* ![](/lesson5/8.png)
+![](/laporan-final/DVWA/lesson7/1.png)
 
-3. Buka halaman login dvwa
+3. Buka hasil Temper Data, dapatkan header Referer dan Cookie pada Request Header, copy informasi header tersebut
 
-* ![](/lesson5/9.png)
+![](/laporan-final/DVWA/lesson7/2.png)
 
-4. Jalankan Temper Data, buka menu Tool > Temper Data . setelah terbuka klik Start Temper
+4. Paste header diatas pada notepad untuk digunakan selanjutnya
 
-* ![](/lesson5/10.png)
+![](/laporan-final/DVWA/lesson7/3.png)
 
 | **Langkah 2: Menggunakan SqlMap untuk mendapatkan DB dan User yang aktif** |
 | :--- |
 
-1. Lakukan login pada dvwa, saat muncul pop up hapus tanda centang pada continue tempering, klik Submit
+1. Masukkan referer dan cookie sebagai parameter dari tag yang kan digunakan pada SqlMap, untuk mendapatkan DB dan user yang aktif berikut SqlMap yang dijalankan
 
-* ![](/lesson5/15.png)
+![](/laporan-final/DVWA/lesson7/4.png)
 
-2. Setelah login buka Temper Data
+2. Berikut hasil yang didapatkan user yang aktif root, dan DB yang digunakan dvwa
 
-3. Klik data POST yang muncul paling atas, kemudian pilih POSTDATA pada Request Header lalu copy 
-
-* ![](/lesson5/11.png)
+![](/laporan-final/DVWA/lesson7/5.png)
 
 | **Langkah 3: Menggunakan SqlMap untuk mendapatkan Username dan Password Database Management** |
 | :--- |
 
-1. Unduh file crack_web_form.pl pada link berikut
-	* http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson5/cwf.tar.gz
+1. Masukkan referer dan cookie sebagai parameter dari tag yang kan digunakan pada SqlMap, untuk mendapatkan Usernama dan Password Database Management berikut SqlMap yang dijalankan
 
-2. Buka `/pentest/password/cwf/`
+![](/laporan-final/DVWA/lesson7/6.png)	
 
-3. Extract cwf.tar.gz dengan command `tar xovfz cwf.tar.gz`
+2. Berikut hasil berupa daftar user database management yang ada
 
-4. Ubah permission `chmod 700 crack_web_form.pl`
+![](/laporan-final/DVWA/lesson7/7.png)	
 
-* ![](/lesson5/12.png)
+3. Berikut hasil berupa daftar user dan hashed password database management yang ada
+
+![](/laporan-final/DVWA/lesson7/8.png)	
+
+4. Masukkan referer dan cookie sebagai parameter dari tag yang kan digunakan pada SqlMap, untuk mendapatkan user privileges dari user db_hacker berikut SqlMap yang dijalankan.
+
+![](/laporan-final/DVWA/lesson7/9.png)	
+
+5. Berikut hasil yang didapatkan
+
+![](/laporan-final/DVWA/lesson7/10.png)	
 
 | **Langkah 4: Menggunakan SqlMap untuk mendapatkan Daftar DB yang ada** |
 | :--- |
 
-1. Jalankan command crack_web_form.pl pada direktori `/pentest/passwords/cwf`
+1. Masukkan referer dan cookie sebagai parameter dari tag yang kan digunakan pada SqlMap, untuk mendapatkan Database yang ada berikut SqlMap yang dijalankan
 
-2. `./crack_web_form.pl -U admin -P password.txt -http "http://10.151.34.215/dvwa/login.php" -data "username=USERNAME&password=PASSWORD&Login=Login" -M "Login failed"`
+![](/laporan-final/DVWA/lesson7/11.png)	
 
-* ![](/lesson5/13.png)
+2. Berikut hasil yang didapatkan
+
+![](/laporan-final/DVWA/lesson7/12.png)	
       
-3. Perhatikan hasil crack yang telah dilakukan, untuk menampilkan hasil percobaan crack yang success jalankan command di bawah:
-     
-4. `grep Successful crack_output.txt`
-
-* ![](/lesson5/14.PNG)
 
 | **Langkah 5: Menggunakan SqlMap untuk mendapatkan Table dan Content dari DB tertentu** |
 | :--- |
 
+1. Masukkan referer dan cookie sebagai parameter dari tag yang kan digunakan pada SqlMap, untuk mendapatkan data tabel yang ada pada database dvwa berikut SqlMap yang dijalankan.
+
+![](/laporan-final/DVWA/lesson7/13.png)	
+
+2. Berikut hasil tabel yang ada
+
+![](/laporan-final/DVWA/lesson7/14.png)	
+
+3. Masukkan referer dan cookie sebagai parameter dari tag yang kan digunakan pada SqlMap, untuk mendapatkan deskripsi pada tabel users berikut SqlMap yang dijalankan.
+
+![](/laporan-final/DVWA/lesson7/15.png)	
+
+4. Berikut deskripsi tabel users
+
+![](/laporan-final/DVWA/lesson7/16.png)
+
+5. Masukkan referer dan cookie sebagai parameter dari tag yang kan digunakan pada SqlMap, untuk mendapatkan data yang ada pada tabel users berikut SqlMap yang dijalankan.
+
+![](/laporan-final/DVWA/lesson7/17.png)	
+
+6. Berikut hasil tabel yang ada
+
+![](/laporan-final/DVWA/lesson7/19.png)
+
+7. Beriktu hasil akhir pada lesson ini
+
+![](/laporan-final/DVWA/lesson7/20.png)

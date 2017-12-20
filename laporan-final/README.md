@@ -5,6 +5,7 @@
 DVWA
 ----
 
+* [Konfigurasi DVWA](/laporan-final/DVWA/konfigurasi.md)
 * [Lesson 4](/laporan-final/DVWA/lesson-4.md)
 * [Lesson 5](/laporan-final/DVWA/lesson-5.md)
 * [Lesson 6](/laporan-final/DVWA/lesson-6.md)
@@ -18,4 +19,9 @@ DVWA
 CUCKOO
 ------
 
-* [Dokumentasi Cuckoo] 
+* [Dokumentasi Cuckoo](/laporan-final/Cuckoo/cuckoo.md)
+
+SNORT
+-----
+
+* [Dokumentasi Snort](/laporan-final/Snort/snort.md)
