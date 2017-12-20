@@ -185,9 +185,10 @@ cuckoo web runserver 0.0.0.0:8000
 ```
 
 11. buka localhost:8000 dari host maka akan muncul seperti gambar berikut
-![](/TampilanAwalCuckoo.png)
+![](TampilanAwalCuckoo.png)
 
 ###Testing Malware
+
 Setelah kita menginstall dan mengkonfigurasi Cuckoo berikut adalah salah satu testing untuk malware
 
 1.Buka localhost:8000 dan akan terlihat tampilan seperti berikut ini 
