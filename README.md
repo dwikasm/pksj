@@ -1,4 +1,4 @@
-# Tugas 1 Perancangan Keamanan Sistem dan Jaringan
+# Tugas Perancangan Keamanan Sistem dan Jaringan
 
 ## Kelompok
 * 5114100109  Nafiar Rahmansyah
@@ -9,3 +9,4 @@
 
 * [Laporan 1](/laporan-1/README.md)
 * [Laporan 2](/laporan-2/README.md)
+* [Laporan 3](/laporan-final/README.md)
