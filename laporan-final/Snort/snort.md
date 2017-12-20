@@ -29,7 +29,7 @@ Untuk Menginstall Snort dalam macOS cukup mudah hanya membutuhkan Homebrew yang 
 brew install snort
 ```
 dari situ secara otomatis brew menginstall semua dependency yang diperlukan untuk menjalankan snort
-![asd](snortinstal.png)
+![asd](InstalSnort.png)
 
 
 ### Konfigurasi
