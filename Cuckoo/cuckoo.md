@@ -103,8 +103,7 @@ untuk menginstal cuckoo dengan menuliskan command
 	``` 
 
 7. Kemudian setting virtualbox.conf di .cuckoo/conf/virtualbox.conf sesuai dengan configurasi dibawah
-
-	 ``` [virtualbox]  
+```[virtualbox]  
   # Specify which VirtualBox mode you want to run your machines on.  
   # Can be "gui", "sdl" or "headless". Refer to VirtualBox's official  
   # documentation to understand the differences.  
@@ -126,7 +125,6 @@ untuk menginstal cuckoo dengan menuliskan command
   # is valid and that the host machine is able to reach it. If not, the analysis  
   # will fail.  
   ip = 192.168.56.101
-```
 ```
 8. seting enable yes di bagian mongodb dalam reporting.conf
 ```
