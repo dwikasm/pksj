@@ -58,4 +58,4 @@ NOTE
 
 3. Berikut hasil percobaan yang kami lakukan
 
-![](/laporan-final/DVWA/lesson10/4.png)
+![](/laporan-final/DVWA/lesson10/4.PNG)
